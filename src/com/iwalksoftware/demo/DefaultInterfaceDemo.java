@@ -1,10 +1,20 @@
 package com.iwalksoftware.demo;
 
-class InterfaceImpl implements InterfaceOne{
+class InterfaceImpl implements InterfaceOne, InterfaceTwo{
 
     @Override
     public void methodOne(String str) {
         System.out.println("Calling from:  Inner Class InterfaceImpl : " +  str);
+    }
+
+    @Override
+    public void methodOne() {
+
+    }
+
+    @Override
+    public void log(String str) {
+        System.out.println(str + " Inner Class logging.");
     }
 }
 
