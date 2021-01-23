@@ -12,9 +12,12 @@ class InterfaceImpl implements InterfaceOne, InterfaceTwo{
 
     }
 
+    // You can pretty much test out by uncommenting the other lines to see the different uses.
     @Override
     public void log(String str) {
-        System.out.println(str + " Inner Class logging.");
+//        System.out.println(str + " Inner Class logging.");
+//        InterfaceOne.super.log(str);
+        InterfaceTwo.super.log(str);
     }
 }
 
