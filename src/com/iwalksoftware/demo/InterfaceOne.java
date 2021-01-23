@@ -4,7 +4,7 @@ public interface InterfaceOne {
     void methodOne(String var1);
 
     default void log(String str) {
-        System.out.println("Interface One logging - " + str);
+        System.out.println(str + " : Interface One logging");
     }
 
     static void print(String str) {

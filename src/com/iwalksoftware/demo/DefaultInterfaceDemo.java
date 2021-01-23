@@ -24,6 +24,9 @@ public class DefaultInterfaceDemo {
         InterfaceOne obj = new InterfaceImpl();
         obj.methodOne("iWalk");
 
+        // Accessing InterfaceOne default method.
+        obj.log("Which log is being run?");
+
 
 
     }
