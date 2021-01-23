@@ -6,6 +6,10 @@ class InterfaceImpl implements InterfaceOne{
     public void methodOne(String str) {
         System.out.println("Calling from:  Inner Class InterfaceImpl : " +  str);
     }
+
+    public void log(String str) {
+        System.out.println(str + " Inner Class logging ");
+    }
 }
 
 public class DefaultInterfaceDemo {
