@@ -3,8 +3,14 @@ package com.iwalksoftware.demo;
 public class TypeInferenceDemo {
 
     public static void main(String[] args) {
-        StringLenghthLambda myLambda = String::length;
-        System.out.println(myLambda.methodOne("Welcome to iWalk"));
+        printLambda(String::length);
+//        printLambda(str -> str.length());
+
+    }
+
+    public static void printLambda(StringLenghthLambda sl) {
+        System.out.println(sl.methodOne("Welcome to iWalk"));
+
     }
 
     interface StringLenghthLambda {
