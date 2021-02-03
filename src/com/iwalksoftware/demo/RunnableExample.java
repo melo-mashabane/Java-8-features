@@ -13,5 +13,9 @@ public class RunnableExample {
 
         aThread.start();
 
+        // Using lambda
+        Thread lambdaThread = new Thread(() -> System.out.println("Helloooow iWalk from Lambda"));
+        lambdaThread.start();
+
     }
 }
