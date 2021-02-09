@@ -2,22 +2,22 @@ package com.iwalksoftware.demo.excercise;
 
 public class Employee {
 
-    private String name;
+    private String group;
     private String dpt;
     private int id;
 
-    public Employee(String name, String dpt, int id) {
-        this.name = name;
+    public Employee(String group, String dpt, int id) {
+        this.group = group;
         this.dpt = dpt;
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getGroup() {
+        return group;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setGroup(String group) {
+        this.group = group;
     }
 
     public String getDpt() {
@@ -34,5 +34,14 @@ public class Employee {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "group='" + group + '\'' +
+                ", dpt='" + dpt + '\'' +
+                ", id=" + id +
+                '}';
     }
 }
