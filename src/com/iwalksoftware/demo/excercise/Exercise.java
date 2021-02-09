@@ -21,11 +21,11 @@ public class Exercise {
         );
 
 
-//      1. Sort list by dept name.
+//      1. Sort list by group name.
         Collections.sort(staffList, new Comparator<Employee>() {
             @Override
             public int compare(Employee o1, Employee o2) {
-                return o1.getDpt().compareTo(o2.getDpt());
+                return o1.getGroup().compareTo(o2.getGroup());
             }
         });
 
@@ -37,23 +37,42 @@ public class Exercise {
 
 //      3. Create a method that prints all the people that belong to a group name that begins with a 'T'
         System.out.println("Prints all the people that belong to a group name that begins with a 'T'");
-        printStaffInGroupThatStartWithT(staffList);
+        printStaffConditionally(staffList, new Condition() {
+            @Override
+            public boolean test(Employee employee) {
+                return employee.getGroup().startsWith("T");
+            }
+        });
         System.out.println("\n");
-        System.out.println("Very inflexible solution. Suppose you wish to search with a different letter 'D' " +
-                "you will need to add another method." +
+        System.out.println("Very inflexible solution. Suppose you wish to search with a different condition" +
+                " you will need to add another method." +
                 " What would be better would be to pass in a behaviour.");
+        System.out.println("\n");
+
+        System.out.println("Prints all the people that belong to a dpt name that begins with a 'M'");
+        printStaffConditionally(staffList, new Condition() {
+            @Override
+            public boolean test(Employee employee) {
+                return employee.getDpt().startsWith("M");
+            }
+        });
+        System.out.println("\n");
     }
 
-    private static void printStaffInGroupThatStartWithT(List<Employee> staff) {
-        for(Employee empl : staff){
-            if(empl.getGroup().startsWith("T"))
-            System.out.println(empl);
+    private static void printStaffConditionally(List<Employee> staff, Condition condition) {
+        for(Employee employee : staff){
+            if(condition.test(employee))
+            System.out.println(employee);
         }
     }
 
     private static void printAllStaff(List<Employee> staff) {
-        for(Employee empl : staff){
-            System.out.println(empl);
+        for(Employee employee : staff){
+            System.out.println(employee);
         }
+    }
+
+    interface Condition{
+        boolean test(Employee employee);
     }
 }
