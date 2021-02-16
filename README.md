@@ -1,6 +1,6 @@
 
 
-# Java 8+ features
+# Java version features
 *Question*: Which Java version to learn and which to use?
 *Answer*: Pending. We shall be covering Java versions from 8 onwards.
 
