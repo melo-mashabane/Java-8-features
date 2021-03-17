@@ -11,3 +11,4 @@
         - Interface type
         - Lambda vs. interface implementation
         - Type inference
+        - Java 7 solution using Inner Classes
